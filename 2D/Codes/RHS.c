@@ -13,6 +13,14 @@ float* RHS(int n_e,int n_n,int count,int**Element_node,float*Ae,int z,int* Bound
         S[Element_node[i][1] - 1] = S[Element_node[i][1] - 1] + ((z*Ae[i])/3); 
         S[Element_node[i][2] - 1] = S[Element_node[i][2] - 1] + ((z*Ae[i])/3); 
     }
+
+    //Changing the RHS Matrix Based on Boundary Conditions
+    //Let's say you have an 5x5 Matrix and 3rd Node is on the Boundary then it change as follows
+    //   | . |                   | . |
+    //   | . |  _________ \      | . |
+    //   | 4 |             \     | 1 |
+    //   | . |  _________  /     | . |
+    //   | . |            /      | . |
     for(int i=0; i<count; i++){
      if(NodeCoordinate[Boundary_nodes[i]][0] == 0){
      S[Boundary_nodes[i]] = Vl;
