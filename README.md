@@ -1,5 +1,5 @@
 # Poisson_solvers
-C code for solving 2D Possion Equation
+C code for solving 2D Possion Equation Using FEM
 
 
 #### Changes before Running in your system:
