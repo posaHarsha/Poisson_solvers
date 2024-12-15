@@ -25,7 +25,10 @@ You Should See a 3D Plot of the Solution Based on Number you Entered
 ## Changes after Each command Execution:
 
 --> make clean command will delete all the .o files (if any)
+
 --> After make command Executable file solver is Generated
+
 --> After ./solver command a CSV file Contains Solution is Generated
+
 --> make plot will Execute a python code that Generate the 3D plot of CSV file
     
