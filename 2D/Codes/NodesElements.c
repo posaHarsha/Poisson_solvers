@@ -1,6 +1,7 @@
 #include "Header/myheader.h"
 #include<stdio.h>
 
+//Funtion will return the Total no.of Nodes and Elements in the Mesh
 int* TotalElemNode(){
     FILE *Input;
     Input = fopen("GMSH/square.msh", "r");

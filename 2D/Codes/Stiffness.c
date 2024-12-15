@@ -1,7 +1,7 @@
 #include<stdlib.h>
 #include "Header/myheader.h"
 
-
+//Funtion will return the Final Stiffness Matrix After Assmebling all the Individual Element Matrices & Applying Nessasary Changess Corresponding to Bpoundary Conditions
 float** AssembleStiffnessMatrix(int n_e,int n_n,int count,int**Element_node, float** NodeCoordinate, float* Ae,int* Boundary_nodes){
     float x21,x32,x13;
     float y12,y31,y23;

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+//Funtion will write a CSV file contains the x,y&z coordinates and the solution at these Coordinates
 void WriteToFile(int N, float *X, float **n_c){
 	FILE *fptr;
 	fptr = fopen("CSV_Files/2D_solution.csv", "w");

@@ -1,6 +1,7 @@
 #include "Header/myheader.h"
 #include<stdlib.h>
 
+//Funtion will b in the Equation [A][x] = [b] after Changing some Values According to Boundary Conditions
 float* RHS(int n_e,int n_n,int count,int**Element_node,float*Ae,int z,int* Boundary_nodes,float** NodeCoordinate,int Vl, int Vr){
       
       float* S = (float*)malloc(n_e * sizeof(float));

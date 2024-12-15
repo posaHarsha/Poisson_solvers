@@ -3,9 +3,10 @@
 #include<stdlib.h>
 
 
+//Funtion will Return a 2D Array which has x,y & z Coordinates of the Corresponding Nodes
 float** ExtractNodeCoordinate(int rows,int cols){
 
-float** NodeCoordinate = (float**)malloc(rows * sizeof(float*));
+    float** NodeCoordinate = (float**)malloc(rows * sizeof(float*));
         for (int i = 0; i < rows; i++) {
              NodeCoordinate[i] = (float*)malloc(cols * sizeof(float));
          }
@@ -66,7 +67,7 @@ float** NodeCoordinate = (float**)malloc(rows * sizeof(float*));
         {
             fgets(buffer, 100, Input);
         }
-
+        //Extraction of Node-Coordinates Started in te loop
         for (int i = 0; i < e; i++)
         {
             fgets(buffer, 100, Input);

@@ -1,5 +1,6 @@
 #include "Header/myheader.h"
 
+//Funtion will Return the Number of Nodes that are on Boundary 
 int NumberofBoundaryNodes(int n_n, float **NodeCoordinate){
 
     int count = -1;

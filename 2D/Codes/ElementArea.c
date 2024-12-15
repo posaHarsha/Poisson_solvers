@@ -3,7 +3,7 @@
 #include<math.h>
 
 
-
+//Funtion will Extract the Area of Each Trinagular Element
 float* ExtractElementArea(int total_nodes,int total_elements,int **a,float **b)
 {
     float x[3],y[3];

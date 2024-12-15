@@ -3,9 +3,12 @@
 #include<stdlib.h>
 
 
+//The Funtion will Return a 2D Array contains the corresponding Node Numbers of Each Element
+//Row number Corresponds to Element number and the 3  Entries in the Row Corresponds to the the Node numbers Associated with the Element
 int** ExtractElementNodes(int rows, int cols){
 
-int** Element_node = (int**)malloc(rows * sizeof(int*));
+	//Allocting Memory to the 2D Array
+        int** Element_node = (int**)malloc(rows * sizeof(int*));
         for (int i = 0; i < rows; i++) {
              Element_node[i] = (int*)malloc(cols * sizeof(int));
          }
@@ -22,10 +25,11 @@ int** Element_node = (int**)malloc(rows * sizeof(int*));
     int n, d, e, f, g, n_e,m,h,node_num[3];
     float a, b, c;
     char buffer[100];
+    //buffer can read upto 100 characters in the line
 
     for (int i = 0; i < 5; i++)
     {
-        fgets(buffer, 100, Input);
+        fgets(buffer, 100, Input);//this will take the cursor to the Next line
     }
 
     sscanf(buffer, "%d %d %d %d", &d, &e, &f, &g);
@@ -86,7 +90,7 @@ int** Element_node = (int**)malloc(rows * sizeof(int*));
     }
 
     sscanf(buffer, "%d %d %d %d", &n, &n, &n, &n);
-    int Duplicate[1000][3];
+    int Duplicate[10000][3];
     d = 0;
     f = 0;
     h=0;

@@ -1,5 +1,6 @@
 # Poisson_solvers
-C code for solving 2D Possion Equation Using FEM
+C code for solving 2D Possion Equation Using FEM for Triangular Elements
+We are Solving Equation for a Square of 4x4 size for Dirclet Boundary Conditions at x=0 & x=4
 
 
 #### Changes before Running in your system:

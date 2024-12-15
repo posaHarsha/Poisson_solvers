@@ -1,6 +1,7 @@
 #include "Header/myheader.h"
 #include<stdlib.h>
 
+//Funtion to solve [A][x] = [b] Equation Using Gaussian Elimination and Returning the [x]
 float* GaussianSolver(int n_n,float** StiffnessMatrix,float* SMT){
 
       float* sol = (float*)malloc(n_n * sizeof(float));
