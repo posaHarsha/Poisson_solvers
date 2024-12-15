@@ -25,6 +25,7 @@ clean:
 	rm -f $(OBJS) solver
 	
 
+# Plot Rule to plot the Final solution
 plot:
 	python3 $(CFLAGS) CSV_Files/3D_plot.py
 
