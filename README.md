@@ -2,7 +2,7 @@
 C code for solving 2D Possion Equation
 
 
-## Changes before Running in your system:
+#### Changes before Running in your system:
 
 --> In the File Testcase of TestCases Folder First line is
 
@@ -10,7 +10,7 @@ C code for solving 2D Possion Equation
     change it to 
     #include "(your_path)/2D/Codes/Header/myheader.h"
 
-## Instructions for running the Code:
+#### Instructions for running the Code:
 
 --> In the Terminal of 2D folder run Below Commands
 
@@ -22,7 +22,7 @@ C code for solving 2D Possion Equation
 
 You Should See a 3D Plot of the Solution Based on Number you Entered
 
-## Changes after Each command Execution:
+#### Changes after Each command Execution:
 
 --> make clean command will delete all the .o files (if any)
 
