@@ -26,10 +26,10 @@ int main(){
         Ae = ExtractElementArea(n_nod,n_elem,Element_node,NodeCoordinate);
         int count = NumberofBoundaryNodes(n_nod,NodeCoordinate);
         int* Boundary_nodes;
+        int* NodesCount;
         Boundary_nodes =  ExtractBoundaryNodes(n_nod,count,NodeCoordinate);
         V = InitialGuess(n_nod,Boundary_nodes,count,NodeCoordinate,Vl,Vr);
-        	
-	
+        NodesCount = NodeCount(n_elem,n_nod,count,Element_node,Ae,z,Boundary_nodes,NodeCoordinate,Vl,Vr,V);
 	
         float** StiffnessMatrix;
         float* S;
@@ -40,7 +40,7 @@ int main(){
         	StiffnessMatrix = AssembleStiffnessMatrix(n_elem,n_nod,count,Element_node,NodeCoordinate,Ae,Boundary_nodes);    
         	S = RHS(n_elem,n_nod,count,Element_node,Ae,z,Boundary_nodes,NodeCoordinate,Vl,Vr,V); 
         	F_RHS = Final_RHS(StiffnessMatrix,V,S,n_nod,Boundary_nodes,count);
-        	StiffnessMatrix = EditStiffness(StiffnessMatrix,V,S,n_nod,Boundary_nodes,count);
+        	StiffnessMatrix = EditStiffness(StiffnessMatrix,V,S,n_nod,Boundary_nodes,count,NodesCount);
         	sol = GaussianSolver(n_nod,StiffnessMatrix,F_RHS);
         	for(int i =0; i<n_nod; i++){
         		V[i] = V[i] + sol[i];

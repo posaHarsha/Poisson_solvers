@@ -1,10 +1,10 @@
 #include "Header/myheader.h"
 
-float **EditStiffness(float **StiffnessMatrix,float* V,float *S, int n_nod, int * Boundary_nodes, int count){
+float **EditStiffness(float **StiffnessMatrix,float* V,float *S, int n_nod, int * Boundary_nodes, int count,int *NodesCount){
 	for(int i =0; i<n_nod; i++){
         	for(int j=0; j<n_nod; j++){
         		if(i==j){
-        			StiffnessMatrix[i][j] -= 2*(S[i]/V[i]);  
+        			StiffnessMatrix[i][j] -= 2*(V[i]*NodesCount[i]);  
         	}
         }
         }
